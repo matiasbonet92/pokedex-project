@@ -51,7 +51,7 @@ const Home = () => {
   if(isLoading) return(<CircularProgress />)
 
   return (
-    <Container fullWidth>
+    <Container>
       <Divider/>
       <Pagination 
         gotoNextPage={nextPage ? gotoNextPage : null} 
@@ -60,7 +60,7 @@ const Home = () => {
       <Divider/>
       <Grid className={classes.main} container>
         {pokemons?.map((pokemon)=>{
-          return(<Pokemon url={pokemon.url}/>)
+          return(<Pokemon key={pokemon.name} url={pokemon.url}/>)
         })}
       </Grid>
       <Divider/>

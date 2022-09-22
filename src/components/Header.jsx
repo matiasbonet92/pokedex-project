@@ -15,8 +15,8 @@ const Header = () => {
   }
 
   return (
-    <Grid margin={0} padding={3} container>
-        <Grid item lg={4} md={6} sx={5}>
+    <Grid margin={0} container>
+        <Grid item lg={4} md={4} sm={4} xs={12}>
           <Button 
             style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}} 
             onClick={handleClickLogo}
@@ -25,8 +25,8 @@ const Header = () => {
             <Typography variant="h3" color="error">Pokedex</Typography>
           </Button>
         </Grid>
-        <Grid item lg={4}></Grid>
-        <Grid item lg={4} md={6} sx={7} style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
+        <Grid item lg={4} md={4} sm={4} xs={0}></Grid>
+        <Grid item lg={4} md={4} sm={4} xs={12} style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
             <Search/>
         </Grid>
     </Grid>

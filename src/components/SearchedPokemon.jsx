@@ -58,7 +58,7 @@ const SearchedPokemon = ({name}) => {
         )
     }else{
         return (
-            <Grid className={classes.main} item lg={3} md={4} sx={2} spacing={3}>
+            <Grid className={classes.main} item lg={2} md={3} sm={4} xs={6}>
                 <Card className={classes.card}>
                     <CardHeader
                         avatar={
