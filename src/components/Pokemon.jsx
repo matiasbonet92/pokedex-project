@@ -3,7 +3,6 @@ import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
-import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
@@ -16,14 +15,10 @@ import CatchingPokemonIcon from '@mui/icons-material/CatchingPokemon';
 const useStyles = makeStyles((theme) => ({
     main:{
       width: '100%',
-      margin: "20px",
-      padding: "10px",
+      padding: "5px",
     },
     card:{
-        padding: 10,
-    },
-    cardMedia:{
-        backgroundColor: "lightgrey",
+        padding: 5,
     },
   }));
 
@@ -48,11 +43,11 @@ const Pokemon = ({url}) => {
                 <CardHeader
                     avatar={
                         <Avatar>
-                            <img src={imagen} alt="" height="30" width="30" />
+                            <img src={imagen} alt="" height="20" width="20" />
                         </Avatar>
                     }
                     title={info.name}
-                    subheader={info.order}
+                    subheader={'# '+info.order}
                     align="end"
                 />
                 <CardMedia
@@ -62,23 +57,11 @@ const Pokemon = ({url}) => {
                     alt={info.name}
                     image={info?.sprites?.front_default}
                 />
-                <CardContent>
-                    <Typography variant="h5" color="primary" align="center">
-                        Some Moves:
-                        {info?.moves?.filter((move, index) => index < 5).map((move) => {
-                            return(
-                                <Typography variant="body2" color="text.secondary" align="justify">
-                                    {'- '+move.move.name}
-                                </Typography>
-                            )
-                        })}
-                    </Typography>
-                </CardContent>
                 <Divider />
                 <CardActions align="center">
                     <Chip icon={<CatchingPokemonIcon/>} label="Type" color="primary"/>
                     <div>
-                        {info?.types?.map((item) => {
+                        {info?.types?.filter((item, index) => index < 1).map((item) => {
                             return(
                                 <Typography variant="subtitle2" color="text.disabled">
                                     {item.type.name}
