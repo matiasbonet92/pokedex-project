@@ -6,11 +6,9 @@ Este es un pequeño proyecto de react donde se ha utilizado la pokeAPI. La aplic
 
 This is a Reactjs proyect that uses the pokeAPI. This aplication has allowed me to practice several concepts that i've learned over the course of weeks, for instance, props and url params. The proyect uses pagination and navigation between different pages and allows me to upgrade my skills handling objects, arrays and asynchronous petitions while working with de API.
 
-# Getting Started with Create React App
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
+# Getting Started with pokedex-project
 
 In the project directory, you can run:
 
